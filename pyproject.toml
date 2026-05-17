@@ -1,0 +1,37 @@
+[project]
+name = "sp500-recommendation-model-implementacion"
+version = "0.1.0"
+description = "Modelo de Recomendación de Acciones S&P 500 - Módulo 2 Implementación y Pruebas - Grupo 20 MIAD Uniandes"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Datos y procesamiento
+    "pandas>=2.2",
+    "numpy>=1.26,<2.0",
+    "pyarrow>=14.0",
+    "openpyxl>=3.1",
+    # Fuentes de datos
+    "yfinance>=0.2.50",
+    # Indicadores técnicos
+    "ta>=0.11",
+    # Series de tiempo
+    "statsmodels>=0.14",
+    "arch>=6.0",
+    # Modelado ML
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    "optuna>=3.0",
+    "shap>=0.45",
+    # Visualización
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "plotly>=5.0",
+    # Prototipo M3 — API y dashboard
+    "dash>=2.0",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "gunicorn>=22.0",
+    # Notebooks
+    "jupyter>=1.0",
+    "ipykernel>=6.0",
+]

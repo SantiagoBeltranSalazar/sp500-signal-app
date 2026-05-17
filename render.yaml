@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sp500-signal-model
+    runtime: python
+    buildCommand: pip install uv && uv sync
+    startCommand: uv run gunicorn src.dashboard.app:server -b 0.0.0.0:$PORT --timeout 120 --workers 1
+    plan: free
+    envVars:
+      - key: RENDER
+        value: "true"
+      - key: PYTHON_VERSION
+        value: "3.11"
