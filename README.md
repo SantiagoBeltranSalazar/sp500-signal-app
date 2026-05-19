@@ -1,7 +1,13 @@
 # S&P 500 · Signal Model — Prototipo
 
 Dashboard de recomendaciones de inversión basado en XGBoost 3-Class para 10 acciones del S&P 500.
-Proyecto de Grado · MIAD Uniandes · Grupo 20.
+Proyecto de Grado · MIAD Uniandes · Grupo 12.
+
+## Visualizar la aplicación
+
+- Ingresar al enlace: https://sp500-signal-app.onrender.com
+
+O para ejecución manual:
 
 ## Requisitos
 
@@ -22,7 +28,7 @@ uv run python src/dashboard/app.py
 
 Abre `http://localhost:8050` en el navegador.
 
-## Correr la API (opcional)
+## Correr la únicamente la API (opcional)
 
 ```bash
 uv run uvicorn src.api.main:app --reload
