@@ -909,7 +909,7 @@ app.layout = html.Div([
         }),
 
         html.Div(
-            'Grupo 20 · MIAD Uniandes · Módulo 3 · Modelo XGBoost 3-Class ±1.5%',
+            'Grupo 12 · MIAD Uniandes · Módulo 3 · Modelo XGBoost 3-Class ±1.5%',
             style={'textAlign': 'center', 'padding': '10px 0 16px',
                    'color': SLATE4, 'fontSize': '11px'},
         ),

@@ -39,7 +39,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title='S&P 500 Recommendation API',
-    description='XGBoost 3-Class ±1.5% — Grupo 20 MIAD Uniandes',
+    description='XGBoost 3-Class ±1.5% — Grupo 12 MIAD Uniandes',
     version='1.0.0',
     lifespan=lifespan,
 )

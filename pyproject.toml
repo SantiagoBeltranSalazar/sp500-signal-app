@@ -1,7 +1,7 @@
 [project]
 name = "sp500-recommendation-model-implementacion"
 version = "0.1.0"
-description = "Modelo de Recomendación de Acciones S&P 500 - Módulo 2 Implementación y Pruebas - Grupo 20 MIAD Uniandes"
+description = "Modelo de Recomendación de Acciones S&P 500 - Módulo 2 Implementación y Pruebas - Grupo 12 MIAD Uniandes"
 requires-python = ">=3.11"
 
 dependencies = [
