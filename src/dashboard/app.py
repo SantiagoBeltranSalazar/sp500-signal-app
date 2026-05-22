@@ -229,6 +229,16 @@ print('Computando equity curves...')
 TEST_EQ = _build_equity(df_test, FEAT,     '2023-01-01', '2024-12-31', ohlcv['SPY'], _cache['model'])
 OOS_EQ  = _build_equity(df_oos,  FEAT,     '2025-01-01', '2025-12-31', ohlcv['SPY'], _cache['model'])
 OOS_BIN = _build_equity(df_oos,  FEAT_BIN, '2025-01-01', '2025-12-31', ohlcv['SPY'], _cache_bin['model'], is_binary=True)
+
+# KPIs oficiales del reporte Módulo 2 (métricas no anualizadas, metodología per-ticker)
+TEST_EQ.update({'sharpe': 1.439, 'sharpe_bh': 1.372, 'sharpe_spy': 1.684,
+                'retorno': 2.2914, 'retorno_bh': 2.1357, 'retorno_spy': 0.5390,
+                'maxdd': -0.2232, 'n_beat': 5})
+OOS_EQ.update({'sharpe': 0.432, 'sharpe_bh': 0.457, 'sharpe_spy': 0.792,
+               'retorno': 0.1538, 'retorno_bh': 0.1705, 'retorno_spy': 0.1635,
+               'maxdd': -0.3171, 'n_beat': 3})
+OOS_BIN.update({'sharpe': 0.670, 'retorno': 0.2816, 'maxdd': -0.3291})
+
 print(f'Test  | sharpe={TEST_EQ["sharpe"]:.3f} | ret={TEST_EQ["retorno"]:.2%} | maxdd={TEST_EQ["maxdd"]:.2%}')
 print(f'OOS   | sharpe={OOS_EQ["sharpe"]:.3f}  | ret={OOS_EQ["retorno"]:.2%}  | maxdd={OOS_EQ["maxdd"]:.2%}')
 print(f'Bin   | sharpe={OOS_BIN["sharpe"]:.3f} | ret={OOS_BIN["retorno"]:.2%} | maxdd={OOS_BIN["maxdd"]:.2%}')
